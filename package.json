@@ -1,0 +1,31 @@
+{
+  "name": "web-component-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "core-js": "^2.6.9",
+    "less": "^2.7.3",
+    "less-loader": "^4.1.0",
+    "monaco-editor-esm-webpack-plugin": "^2.1.0",
+    "monaco-editor-webpack-plugin": "^6.0.0",
+    "vue-template-compiler": "^2.6.0",
+    "vuepress": "^1.9.7"
+  },
+  "dependencies": {
+    "ant-design-vue": "^1.7.8",
+    "axios": "^1.1.2",
+    "lodash": "^4.17.21",
+    "monaco-editor": "^0.30.0",
+    "monaco-editor-nls": "^3.0.0",
+    "web-component": "^1.0.166"
+  }
+}

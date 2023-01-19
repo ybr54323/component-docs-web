@@ -1,0 +1,96 @@
+#edit-tree-nodes {
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  overflow: hidden;
+
+  &.children {
+    max-height: 0;
+    overflow: hidden;
+    transform-origin: top;
+    transform: translateY(-10%);
+    opacity: 0;
+    &.show {
+      opacity: 1;
+      max-height: 9999px;
+      transform: translateY(0%);
+    }
+    &.hide {
+    }
+  }
+
+  .item {
+    &:hover {
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 30px;
+      border-radius: 4px;
+      padding-right: 6px;
+      cursor: pointer;
+
+      &.fat {
+        height: 40px;
+      }
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.04);
+      }
+
+      &.current {
+        background: #e6f0ff;
+      }
+
+      &.hit {
+        .char {
+          color: #f5222d;
+        }
+      }
+      .placeholder {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: transparent;
+      }
+
+      .title-wrap {
+        cursor: pointer;
+        &:hover {
+        }
+      }
+      .input {
+        width: 150px;
+      }
+      .right {
+        opacity: 0;
+        transition: all 0.2s;
+        &.show {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .icon {
+    width: 16px;
+    object-fit: contain;
+    height: 16px;
+  }
+  .icon-wrap {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+
+    &.show,
+    &:hover {
+      background: rgba(31, 35, 41, 0.1);
+    }
+  }
+  /deep/ .ant-input {
+    box-sizing: border-box;
+    padding-right: 90px !important;
+  }
+  /deep/ .ant-input-affix-wrapper {
+    width: 100% !important;
+  }
+}
